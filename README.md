@@ -3,8 +3,8 @@ Displays the Area and Perimeter of a rectangle using inheritance
 
 
 ## Installation
-git clone https://github.com/ISSOLANO27/rectangle-calculator.git
-cd rectangle-calculator
+https://github.com/ISSOLANO27/rectangle-calculator.git
+
 
 
 ## Contributing
