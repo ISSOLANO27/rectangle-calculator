@@ -28,21 +28,37 @@ class Rectangle:
         return representation
 
 
+@dataclass
+class Square(Rectangle):
+    side: float
+
+    def __post_init__(self):
+        self.width = self.side
+        self.height = self.side
+
+
 def main():
     try:
-        Userwidth = float(input("Enter the width of the Rectangle: "))
-        Userheight = float(input("Enter the height of the Rectangle: "))
+        shape_type = input("Enter the shape (rectangle/square): ").lower()
+        if shape_type == "rectangle":
+            width = float(input("Enter the width of the Rectangle: "))
+            height = float(input("Enter the height of the Rectangle: "))
+            rect = Rectangle(width, height)
+            print(f"The perimeter of the rectangle is: {rect.Perimeter()}")
+            print(f"The area of the rectangle is: {rect.Area()}")
+            print("Visual representation of the rectangle:")
+            print(rect)
+        elif shape_type == "square":
+            side = float(input("Enter the side length of the Square: "))
+            sqr = Square(side)
+            print(f"The perimeter of the square is: {sqr.Perimeter()}")
+            print(f"The area of the square is: {sqr.Area()}")
+            print("Visual representation of the square:")
+            print(sqr)
+        else:
+            print("Invalid shape type entered. Please enter 'rectangle' or 'square'.")
     except ValueError:
-        print("Please enter a valid number for the width adn height")
-
-    # Create a rectangle object with the provided dimensions
-    rect = Rectangle(Userwidth, Userheight)
-    print(f"The perimeter of the rectangle is: {rect.Perimeter}")
-    print(f"The area of the rectangle is: {rect.Area} ")
-
-    print("Visual representation of the rectangle")
-    print(rect)
+        print("Please enter a valid number for dimensions")
 
 if __name__ == "__main__":
     main()
-
