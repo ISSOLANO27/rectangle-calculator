@@ -30,11 +30,8 @@ class Rectangle:
 
 @dataclass
 class Square(Rectangle):
-    side: float
-
-    def __post_init__(self):
-        self.width = self.side
-        self.height = self.side
+    def __init__(self, side: float):
+        super().__init__(side, side) 
 
 
 def main():
