@@ -1,4 +1,3 @@
-from dataclasses import dataclass
 
 @dataclass
 class Rectangle:
@@ -15,20 +14,7 @@ class Rectangle:
         """Calculates the area by multiplying the width by 
         the height"""
         return self.width * self.height
-    
-    '''def __str__(self):
-        """Generate a string representation of a rectangle"""
-        top_bottom = "+" + "-" * int(self.width) + "+\n"
-        side = ("|" + " " * int(self.width) + "|\n") * int(self.height)
-    
-    # Alternate list comprehension
-    def __str__(self):
-        """Generate a string representation of the rectangle."""
-        top_bottom = "+" + "-" * int(self.width) + "+\n"
-        # Use list comprehension and str.join to create the sides
-        sides = "".join(["|" + " " * int(self.width) + "|\n" for _ in range(int(self.height))])
-        return top_bottom + sides + top_bottom'''
-    
+
     def __str__(self):
         """Generate a scaled string representation of the rectangle."""
         scale_factor = 2  # Adjust this to scale the rectangle's size in the visualization
