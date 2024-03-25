@@ -1,5 +1,5 @@
 # Rectangle Calculator
-Displays the Area and Perimeter of a rectangle using inheritance
+Displays the Area and Perimeter of a rectangle or square using dataclass
 
 
 ## Installation
